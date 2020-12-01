@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Commodities>
+  <commodity id=" 1">
+    <maxAmountCommodity>15</maxAmountCommodity>
+    <SellerWithMaxAmountCommodity id="1">seller's name: Anton</SellerWithMaxAmountCommodity>
+  </commodity>
+  <commodity id=" 2">
+    <maxAmountCommodity>48</maxAmountCommodity>
+    <SellerWithMaxAmountCommodity id="2">seller's name: Ilia</SellerWithMaxAmountCommodity>
+  </commodity>
+  <commodity id=" 3">
+    <maxAmountCommodity>120</maxAmountCommodity>
+    <SellerWithMaxAmountCommodity id="3">seller's name: Elena</SellerWithMaxAmountCommodity>
+  </commodity>
+</Commodities>

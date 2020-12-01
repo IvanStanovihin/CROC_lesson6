@@ -1,0 +1,21 @@
+{
+	"sellers": [
+		{
+			"id":1,
+			"lastName":"Popov",
+			"firstName":"Anton"
+		},
+		{
+			"id":2,
+			"lastName":"Dulub",
+			"firstName":"Ilia"
+		},
+		{
+			"id":3,
+			"lastName":"Smirnova",
+			"firstName":"Elena"
+		}
+	]
+}
+
+			

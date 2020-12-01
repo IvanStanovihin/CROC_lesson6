@@ -1,0 +1,47 @@
+{
+	"sales":[
+			{
+				"saleID":1,
+				"sellerID":2,
+				"commodityID":1,
+				"amountCommodity":12,
+				"dateOfSale":"01/11/2020"
+			},
+			{
+				"saleID":2,
+				"sellerID":1,
+				"commodityID":1,
+				"amountCommodity":20,
+				"dateOfSale":"03/11/2020"
+			},
+			{
+				"saleID":3,
+				"sellerID":3,
+				"commodityID":3,
+				"amountCommodity":10,
+				"dateOfSale":"02/11/2020"
+			},
+			{
+				"saleID":4,
+				"sellerID":2,
+				"commodityID":1,
+				"amountCommodity":15,
+				"dateOfSale":"05/11/2020"
+			},
+ 			{
+				"saleID":5,
+				"sellerID":3,
+				"commodityID":2,
+				"amountCommodity":10,
+				"dateOfSale":"03/11/2020"
+			},
+			{
+				"saleID":6,
+				"sellerID":1,
+				"commodityID":3,
+				"amountCommodity":5,
+				"dateOfSale":"02/11/2020"
+			}
+		
+		]
+}

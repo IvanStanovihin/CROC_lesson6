@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dates>
+  <date day="2020-11-05">
+    <amountSales>1</amountSales>
+  </date>
+  <date day="2020-11-03">
+    <amountSales>2</amountSales>
+  </date>
+  <date day="2020-11-02">
+    <amountSales>2</amountSales>
+  </date>
+  <date day="2020-11-01">
+    <amountSales>1</amountSales>
+  </date>
+</Dates>
