@@ -21,4 +21,8 @@ public class ParseSales {
                 dateResult = LocalDate.of(dateNumber[2], dateNumber[1], dateNumber[0]);
             return dateResult;
         }
+
+        public int getAmountCommodity() {
+            return amountCommodity;
+        }
     }

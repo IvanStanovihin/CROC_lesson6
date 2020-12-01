@@ -60,8 +60,7 @@ class XMLWriter{
             }
         }
 
-        public static void createXMLDocumentForSecondTask(Map<LocalDate, Long> distributionByDates){
-
+        public static void createXMLDocumentForSecondTaskA(Map<LocalDate, Long> distributionByDates){
             // Создаем документ
             Document xmlDoc = new Document();
             // Создаем корневой элемент
@@ -79,7 +78,30 @@ class XMLWriter{
                 Format fmt = Format.getPrettyFormat();
                 XMLOutputter serializer = new XMLOutputter(fmt);
                 serializer.output(xmlDoc, System.out);
-                serializer.output(xmlDoc, new FileOutputStream(new File("src\\outputXMLFiles\\DistributionSales.xml")));
+                serializer.output(xmlDoc, new FileOutputStream(new File("src\\outputXMLFiles\\DistributionSalesA.xml")));
+            }
+            catch (IOException e) {
+                System.err.println(e);
+            }
+        }
+
+        public static void createXMLDocumentForSecondTaskB(Map<LocalDate, Integer>countCommoditiesSold){
+
+            Document xmlDoc = new Document();
+            Element root = new Element("Dates");
+            xmlDoc.setRootElement(root);
+
+            for (Map.Entry<LocalDate, Integer> pair : countCommoditiesSold.entrySet()){
+                root.addContent(new Element("CountOfCommoditySold")
+                        .setAttribute("byDate", "" + pair.getKey())
+                        .addContent("" + pair.getValue())
+                );
+            }
+            try {
+                Format fmt = Format.getPrettyFormat();
+                XMLOutputter serializer = new XMLOutputter(fmt);
+                serializer.output(xmlDoc, System.out);
+                serializer.output(xmlDoc, new FileOutputStream(new File("src\\outputXMLFiles\\DistributionSalesB.xml")));
             }
             catch (IOException e) {
                 System.err.println(e);

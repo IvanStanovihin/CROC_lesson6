@@ -35,8 +35,13 @@ public class Main {
             XMLWriter.createXMLDocumentForFirstTask(maxCommoditiesCount, parseSellers);
 
             System.out.println("\nЗадание№2");
+            System.out.println("Первый способ:");
             Map<LocalDate, Long> distributionSale = getDistributionSaleByDate(parseSales);
-            XMLWriter.createXMLDocumentForSecondTask(distributionSale);
+            XMLWriter.createXMLDocumentForSecondTaskA(distributionSale);
+
+            System.out.println("\nВторой способ:");
+            Map<LocalDate, Integer> countCommoditiesSold = countCommoditiesSoldByDate(parseSales);
+            XMLWriter.createXMLDocumentForSecondTaskB(countCommoditiesSold);
 
         }catch(FileNotFoundException ex1){
             ex1.printStackTrace();
@@ -73,5 +78,11 @@ public class Main {
         return distributionSale;
     }
 
-
+    public static Map<LocalDate, Integer> countCommoditiesSoldByDate(ParseSales saleInfo){
+        Map<LocalDate, Integer> countCommoditiesSold;
+        countCommoditiesSold = saleInfo.sales.stream()
+                .collect(Collectors
+                        .groupingBy(Sale::getDate, Collectors.summingInt(Sale::getAmountCommodity)));
+        return countCommoditiesSold;
+    }
 }
